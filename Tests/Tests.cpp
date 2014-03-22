@@ -9,19 +9,22 @@ using namespace ShoppingKataCode;
 class ShoppingKataTests
 {
 protected:
-	void AddItemsToBasket(const std::string& items, Basket& basket)
-	{
-		for (auto c : items) {
-			auto item = std::string(1, c); 
-			basket.Add(item);
-		}
-	}
 
 	void CheckCostAfterAddingItems(const std::string& items, int expectedCost)
 	{
 		AddItemsToBasket(items, _basket);
 		auto actualCost = _checkout.Process(_basket);
 		CHECK_EQUAL(expectedCost, actualCost);
+	}
+
+private:
+
+	void AddItemsToBasket(const std::string& items, Basket& basket)
+	{
+		for (auto c : items) {
+			auto item = std::string(1, c); 
+			basket.Add(item);
+		}
 	}
 
 	Checkout _checkout;
