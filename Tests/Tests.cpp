@@ -2,9 +2,9 @@
 #include "Checkout.h"
 #include "Basket.h"
 
-using namespace ShoppingKataCode;
-
 #include <UnitTest++.h>
+
+using namespace ShoppingKataCode;
 
 class ShoppingKataTests
 {
