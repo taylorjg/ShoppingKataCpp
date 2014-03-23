@@ -4,6 +4,8 @@
 #include <vector>
 #include <string>
 
+#include "DiscountRule.h"
+
 namespace ShoppingKataCode {
 
 class DiscountRule;
@@ -15,7 +17,7 @@ public:
 	int Discount(const std::string& item);
 
 private:
-	std::vector<DiscountRule*> _discountRules;
+	std::vector<DiscountRule> _discountRules;
 };
 
 }
